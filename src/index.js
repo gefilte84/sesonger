@@ -23,6 +23,7 @@ class App extends React.Component {
             );
         
     }
+    
     // Lifecycle metoder
     // dataloading burde alltid gjøres i componentDidMount
     // componentDidUpdate burde alltid brukes til dataloading når en komponent oppdater. 
@@ -40,6 +41,7 @@ class App extends React.Component {
         return <div>Loading!</div>;
     }
 }
+
 
 ReactDOM.render(
     <App />,
