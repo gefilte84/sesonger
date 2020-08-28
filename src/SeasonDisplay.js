@@ -20,7 +20,7 @@ const getSeason = (lat, month) => {
     }
 }
 
-// vise hvilken sesong med icon
+// vise hvilken sesong med icon. Funksjonell komponent
 const SeasonDisplay = (props) => {
     const season = getSeason(props.lat, new Date().getMonth());
     const { text, iconName} = SeasonConfig[season];  

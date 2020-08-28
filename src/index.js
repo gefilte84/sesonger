@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
-
+import Spinner from './Spinner';
 // skaffer posisjonen til bruker. Klasse basert komponent
 
 class App extends React.Component {
@@ -30,15 +30,24 @@ class App extends React.Component {
     // input fra bruker eller knappetrykk
     // componentWillUnmount brukes til å rydde
     
-    // react sier vi MÅ ha en render metode! Dette er hva bruker ser.
-    render() {
+    
+    // hjelpe metode for rød border
+    renderContent() {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>;
         }
         if (!this.state.errorMessage && this.state.lat) {
             return <SeasonDisplay lat={this.state.lat} />       
         }
-        return <div>Loading!</div>;
+        return <Spinner />
+    }
+    // react sier vi MÅ ha en render metode! Dette er hva bruker ser.
+    render() {
+      return (
+          <div className="border red">
+              {this.renderContent()}
+          </div>
+      );
     }
 }
 
