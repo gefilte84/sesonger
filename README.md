@@ -1,3 +1,5 @@
+Sesong app som bruker geolocation API for å si hvilken værsesong (sommer eller vinter) basert på din GPS lokasjon. Laget i React av Najim Zaouaghi
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
